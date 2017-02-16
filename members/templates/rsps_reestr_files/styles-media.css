@@ -1,0 +1,215 @@
+#but-enter:hover {text-decoration: none;}
+
+.telefon p, .telefon-foot p {margin-bottom: 5px; font-size: 1em; margin-left: 10px;}
+.telefon p:last-child, .telefon-foot p:last-child {margin-bottom: 0;}
+.telefon p i, .telefon-foot p i {color: #086DA3; margin-right: 10px;}
+
+.telefon-foot {padding-top: 25px;}	
+
+.main-iko-new {
+	display: inline-block; 
+	width: 110px;
+	background-color: #157bb1; 
+	font-size: 0.8em;
+}
+
+.clearfix .main-iko-new .wi {color: #D9F0FD; margin-left:-30px;}
+.clearfix .main-iko-new .wi:hover {background: none; color: #fff;}
+
+.clearfix:before, .clearfix:after {content: " "; display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+
+nav {
+	height: 40px;
+	width: 100%;
+	position: relative;
+}
+nav ul {
+	padding: 0;
+	margin: 0 auto;
+	width: 100%;
+	height: 40px;
+}
+nav a {
+	color: #fff;
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	text-decoration: none;
+}
+nav li a {
+	border-right: none;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+nav li {display: inline; float: left;}
+nav li:last-child a {border-right: 0;}
+nav a#pull {display: none;}
+
+.modal input[type="text"], .modal input[type="password"], .modal select, .modal input[type="radio"] {margin-bottom: 10px;}
+
+.foot {font-size: 13px; padding-left: 0;}
+
+.telefon-foot {padding-top: 10px;}
+
+/*==========РАЗРЕШЕНИЯ============*/
+
+@media screen and (max-width: 768px) {
+	nav {height: auto;}
+	nav ul {
+		width: 100%;
+		display: none;
+		height: 40px;
+	}
+	.clearfix .main-iko-new .wi { margin-left:0px;}
+	nav li {
+		width: 50%;
+		float: left;
+		position: relative;
+	}
+	nav li a {border-bottom: 1px solid #999999; border-right: 1px solid #999999;}
+	nav a {
+		text-align: left;
+		width: 100%;
+		text-indent: 25px;
+	}
+	nav a#pull {
+		display: block;
+		width: 100%;
+		position: relative;
+		line-height: 40px;
+		float: right;
+		text-align: right;
+		margin-right: 30px;
+		color: #fff;
+	}
+
+	.newsChlen img {width: 140px;height: auto;}
+
+	.capp td {font-size: 0.9em;}
+
+	.but {padding: 5px 10px;}
+
+	.bottommenu, .page, .account, #breadcrumb, ul.tabs {margin-left: 10px;}
+
+	.search a {font-size: 0.7em;}
+
+	ul.tabs li a {padding-left: 10px;padding-right: 10px;}
+
+	.bottommenu a, .bottommenu a:link {margin-right: 40px;}
+
+	#reg-link {width: 400px;}
+
+	#region {width: 205px;}
+
+	.window .container {width: 660px;}
+	.window .authorization {width: 550px;}
+
+	.modal {font-size: 0.9em;}
+	.modal input[type="text"], .modal input[type="password"], .modal select, .modal input[type="radio"] {margin-bottom: 5px;}
+
+	.filter select {width: 422px;max-width: none;}
+}
+
+@media only screen and (max-width: 400px) and (min-width: 320px) {
+	nav {
+		border-bottom: 0;
+	}
+	nav ul {
+		display: none;
+		height: auto;
+	}
+	nav a#pull {
+		display: block;
+		width: 100%;
+		position: relative;
+		line-height: 30px;
+		color: #fff;
+		margin-right: 10px;
+	}
+	
+	nav li a {border-right: none;}
+
+	.clearfix ul a, .clearfix ul a:link {padding: 10px; padding-bottom: 10px !important;}
+
+	.logo img {width: 120px; margin-left: 5px;}
+
+	.name {
+		width: 100%;
+		font-size: 1.6em;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 5px;
+	}
+
+	.telefon {
+		width: 160px;
+		padding: 20px;
+		position: relative;
+		top: -150px;
+		right: -170px;
+		background-color: inherit;
+	}
+
+	.telefon-foot {
+		width: 160px;
+		height: auto;
+		padding: 20px;
+		position: relative;
+		top: -100px;
+		right: -170px;
+		background-color: inherit;
+	}
+
+	.foot {padding-top: 10px; font-size: 10px;}
+	
+	#footr .container {margin-top: 5px;margin-bottom: 5px;}
+	#footr .row {margin-bottom: 0;}
+
+	.bottommenu a, .bottommenu a:link {margin-right: 20px;}
+
+	.greyy {top: -70px;}
+	.greyy .container {margin-top: 10px; margin-bottom: 10px;}
+
+	ul.tabs {margin-left: 0;}
+	ul.tabs li a {padding-left: 5px; padding-right: 5px;}
+
+	.search input[type="text"], .filter input[type="text"] {width: 270px;}
+	.search .five:last-child {margin-top: 10px;}
+
+	.filter .nine {font-size: 12px;}
+	.filter select {width: 280px;}
+
+	.window .container {width: 250px; margin-left: 15px;}
+	.window .authorization {width: 250px;}
+	.window .modal {padding: 10px 20px;}
+
+	.modal {font-size: 0.9em;}
+	.modal input[type="text"], .modal input[type="password"], .modal select, .modal input[type="radio"] {margin-bottom: 0;}
+	.modal .clearfix {display: none;}
+	.modal h3 {margin-bottom: 10px;}
+	.modal input[type="text"], .modal input[type="password"] {width: 240px; height: 10px;}
+
+	#region {width: 250px; margin-top: 5px; }
+	
+	.tooltip::after {right: 10px; left: 10px;}
+}
+
+@media only screen and (max-width: 380px) and (min-width: 360px) {
+	.window .container {width: 290px; margin-left: 15px;}
+	.window .authorization {width: 290px;}
+	.modal input[type="text"], .modal input[type="password"] {width: 280px;}
+}
+
+/*@media only screen and (max-width : 320px) {
+	nav li {
+		display: block;
+		float: none;
+		width: 100%;
+	}
+	nav li a {
+		border-bottom: 1px solid #999999;
+	}
+}*/
