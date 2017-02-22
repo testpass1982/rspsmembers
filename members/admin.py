@@ -7,9 +7,14 @@ class MemberAdmin(admin.ModelAdmin):
 
 class RspsDivAdmin(admin.ModelAdmin):
     list_display = ('title', 'region', 'telephone', 'email')
+
 class RspsEventsAdmin(admin.ModelAdmin):
     list_display = ('title', 'place', 'date', 'rsps_div')
+
 admin.site.register(Region)
+
 admin.site.register(RspsDiv, RspsDivAdmin)
+
 admin.site.register(RspsMember, MemberAdmin)
+
 admin.site.register(RspsEvents, RspsEventsAdmin)
