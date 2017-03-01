@@ -1,9 +1,10 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 class Region(models.Model):
     title = models.CharField("Название", max_length=100)
-    has_division = models.BooleanField()
+    has_division = models.BooleanField("Есть подразделение")
 
     def __str__(self):
         return self.title
@@ -12,13 +13,19 @@ class Region(models.Model):
         verbose_name_plural = "Регионы"
 
 class RspsDiv(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField("Название", max_length=200)
     region = models.ForeignKey(Region, verbose_name = "Регион")
-    telephone = models.CharField(max_length=50)
+    telephone = models.CharField("Телефон", max_length=50)
     email = models.EmailField()
+    created_date = models.DateTimeField("Дата создания", blank=True, null=True)
+
+    def publish(self):
+        self.created_date = timezone.now()
+        self.save()
 
     def __str__(self):
         return self.title
+
     class Meta:
         verbose_name = "Подразделение"
         verbose_name_plural = "Подразделения"
@@ -31,6 +38,7 @@ class RspsMember(models.Model):
     is_a_leader = models.BooleanField("Руководитель")
     rsps_div = models.ForeignKey(RspsDiv, verbose_name="Подразделение")
     education = models.CharField("Образование", max_length=200, blank=True, null=True)
+    created_date = models.DateField("Дата принятия", blank=True, null=True)
 
     def __str__(self):
         return u'%s %s %s' %(self.first_name, self.middle_name, self.last_name)

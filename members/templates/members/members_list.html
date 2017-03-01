@@ -1,0 +1,22 @@
+  <html>
+        <head>
+            <title>Члены РСПС</title>
+        </head>
+        <body>
+            <div>
+                <h1><a href="">Список членов РСПС</a></h1>
+            </div>
+
+            {% for member in members %}
+
+            <div>
+                <h2><a href="">{{ member.last_name }} {{ member.first_name }} {{ member.middle_name }}</a></h2>
+                <p>Дата принятия: {{ member.created_date }}</p>
+                <p>Место работы: {{ member.job }}</p>
+            </div>
+
+           {% endfor %}
+
+            </div>
+        </body>
+    </html>
