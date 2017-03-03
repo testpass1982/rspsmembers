@@ -1,0 +1,9 @@
+{% extends 'members/base.html' %}
+
+{% block content %}
+	<h1>Новый член РСПС</h1>
+	<from  method="POST" class="post-form">{% csrf_token %} 
+	{{ form.as_p }}
+	<button type="sumbit" class="save btn btn-default">Сохранить</button>
+	</from>
+{% endblock %}

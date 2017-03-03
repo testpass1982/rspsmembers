@@ -1,0 +1,13 @@
+{% extends 'members/base.html' %}
+
+{% block content %}
+<div class="post">
+	{% if member.created_date %}
+	<div class="date">Дата принятия в РСПС: {{ member.created_date }}</div>
+	{% endif %}
+	<h1>{{ member.last_name }} {{ member.first_name }} {{ member.middle_name }}</h1>
+	<p>Место работы: {{ member.job }}</p>
+	<p>Образование: {{ member.education }}</p>
+	<p>Подразделение РСПС: {{ member.rsps_div }}</p>
+</div>
+{% endblock %}
